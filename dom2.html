@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Hola</p>
+<p>En este ejempo vamos a mostrar el metodo
+     <b>getElementsByTagName</b>.</p>
+
+<p id="demo"></p>
+
+<script>
+var elementosParrafo = document.getElementsByTagName("p");
+console.log(elementosParrafo)
+document.getElementById("demo").innerHTML = 
+'Texto en el primer bloque (index 0): ' + elementosParrafo[0].innerHTML;
+</script>
+
+</body>
+</html>

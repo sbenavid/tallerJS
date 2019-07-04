@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Buscar elementos usando document.forms</h2>
+
+<form id="frm1" action="corre">
+  Nombre: <input type="text" name="fname" value="Peter"><br/>
+  Apellido: <input type="text" name="lname" value="Parker"><br/>
+  <input type="submit" value="GO">
+</form> 
+
+<p>Con el siguiente boton se muestran los elementos de la forma</p>
+
+<button onclick="formElements()">picale</button>
+
+<p id="demo"></p>
+
+<script lang="javascript">
+function formElements() {
+  var x = document.forms["frm1"];
+  console.log(x)
+  var text = "";
+  var i;
+  for (i = 0; i < x.length ;i++) {
+    text += x.elements[i].value + "<br>";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
